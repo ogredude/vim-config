@@ -1,6 +1,6 @@
 set nocompatible " Be iMproved
 filetype on
-filetype off
+" filetype off
 
 " Vundle
 set rtp+=~/.vim/bundle/vundle/
@@ -19,7 +19,7 @@ Bundle 'gmarik/vundle'
 
 Bundle 'Lokaltog/vim-powerline'
 let g:Powerline_symbols = 'fancy' " Enable fancy symbols for vim-powerline
-call Pl#Theme#InsertSegment('ws_marker', 'after', 'lineinfo')
+" call Pl#Theme#InsertSegment('ws_marker', 'after', 'lineinfo')
 
 Bundle 'guicolorscheme.vim'
 Bundle 'YankRing.vim'
@@ -37,6 +37,7 @@ Bundle 'tpope/vim-git'
 Bundle 'tpope/vim-cucumber'
 Bundle 'tpope/vim-abolish'
 Bundle 'tpope/vim-rails'
+Bundle 'tpope/vim-rsi'
 
 Bundle 'godlygeek/csapprox'
 Bundle 'sjl/gundo.vim'
@@ -47,7 +48,7 @@ Bundle 'Soares/rainbow.vim'
 Bundle 'ervandew/supertab'
 Bundle 'nanki/treetop.vim'
 Bundle 'slim-template/vim-slim'
-Bundle 'nathanaelkane/vim-indent-guides'
+" Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'pangloss/vim-javascript'
 Bundle 'briancollins/vim-jst'
 Bundle 'Townk/vim-autoclose'
@@ -96,12 +97,12 @@ let wiki_1 = {}
 let wiki_1.nested_syntaxes = {'python': 'python', 'ruby': 'ruby', 'rails': 'rails', 'yaml': 'yml'}
 
 " configure IndentGuides plugin
-let g:indent_guides_auto_colors = 0
-let g:indent_guides_start_level = 3
-let g:indent_guides_guide_size  = 1
-autocmd! VimEnter * hi IndentGuidesOdd ctermbg=236 guibg=#303030 | hi IndentGuidesEven ctermbg=239 guibg=#505050
-autocmd BufRead * IndentGuidesEnable
-"autocmd! VimEnter,Colorscheme * hi IndentGuidesEven ctermbg=123 guibg=#880055
+" let g:indent_guides_auto_colors = 0
+" let g:indent_guides_start_level = 3
+" let g:indent_guides_guide_size  = 1
+" autocmd! VimEnter * hi IndentGuidesOdd ctermbg=236 guibg=#303030 | hi IndentGuidesEven ctermbg=239 guibg=#505050
+" autocmd BufRead * IndentGuidesEnable
+" autocmd! VimEnter,Colorscheme * hi IndentGuidesEven ctermbg=123 guibg=#880055
 
 " configure ack.vim plugin
 let g:ackprg = 'ag --nogroup --nocolor --column'
@@ -110,7 +111,7 @@ syntax on
 filetype plugin on
 filetype indent on
 set number " Show line numbers
-set paste  " Make pasting work
+" set paste  " Make pasting work
 
 " Enable syntax folding for blocks and comments.
 set foldmethod=syntax
@@ -118,7 +119,7 @@ set foldminlines=3
 set foldlevel=100
 
 " indentation configuration
-set cindent
+" set cindent
 set smartindent
 set autoindent
 
@@ -297,6 +298,9 @@ imap <C-S-tab> <ESC>:tabprevious<CR>i
 imap <C-tab> <ESC>:tabnext<CR>i
 nmap <C-t> :tabnew<CR>
 imap <C-t> <ESC>:tabnew<CR>
+
+" Hashrockets!
+imap <C-L> <space>=><space>
 
 " Bash like keys for the command line
 cnoremap <C-A> <Home>
