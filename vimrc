@@ -1,6 +1,6 @@
 set nocompatible " Be iMproved
-filetype on
-" filetype off
+" filetype on
+filetype off
 
 " Vundle
 set rtp+=~/.vim/bundle/vundle/
@@ -18,8 +18,9 @@ Bundle 'gmarik/vundle'
  " NOTE: comments after Bundle command are not allowed..
 
 Bundle 'Lokaltog/vim-powerline'
-let g:Powerline_symbols = 'fancy' " Enable fancy symbols for vim-powerline
-" call Pl#Theme#InsertSegment('ws_marker', 'after', 'lineinfo')
+let g:Powerline_colorscheme = 'solarized256'
+" let g:Powerline_symbols = 'fancy' " Enable fancy symbols for vim-powerline
+call Pl#Theme#InsertSegment('ws_marker', 'after', 'lineinfo')
 
 Bundle 'guicolorscheme.vim'
 Bundle 'YankRing.vim'
@@ -27,6 +28,9 @@ Bundle 'jQuery'
 Bundle 'molokai'
 Bundle 'taglist.vim'
 Bundle 'vimwiki'
+Bundle 'snipMate'
+Bundle 'rodjek/vim-puppet'
+
 
 " tpope
 Bundle 'tpope/vim-endwise'
@@ -45,10 +49,10 @@ Bundle 'scrooloose/nerdcommenter'
 Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/syntastic'
 Bundle 'Soares/rainbow.vim'
-Bundle 'ervandew/supertab'
+" Bundle 'ervandew/supertab'
 Bundle 'nanki/treetop.vim'
 Bundle 'slim-template/vim-slim'
-" Bundle 'nathanaelkane/vim-indent-guides'
+Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'pangloss/vim-javascript'
 Bundle 'briancollins/vim-jst'
 Bundle 'Townk/vim-autoclose'
