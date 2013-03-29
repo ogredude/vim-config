@@ -167,6 +167,11 @@ set scrolloff=3
 " Always show status line
 set laststatus=2
 
+" Status line settings
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
 " default encoding
 set encoding=utf-8
 
@@ -305,6 +310,9 @@ imap <C-t> <ESC>:tabnew<CR>
 
 " Hashrockets!
 imap <C-L> <space>=><space>
+
+" Syntastic check
+map <leader>sc :SyntasticCheck<CR>
 
 " Bash like keys for the command line
 cnoremap <C-A> <Home>
