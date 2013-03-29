@@ -1,8 +1,8 @@
-# How to use SpaceGhost's Brogramming vim configuration
+# How to use SpaceGhost's Brogramming vim configuration (Ogre-style)
 
 mkdir ~/vim_backup && mv ~/.vim{,rc} ~/vim_backup/
 
-git clone git://github.com/Spaceghost/vim-config
+git clone git://github.com/ogredude/vim-config
 
 cd vim-config && make install
 
@@ -12,4 +12,4 @@ vim +BundleInstall
 
 Note: LustyJuggler requires vim-ruby installed.
 
-
+Note: vim-nox Ubuntu package works just fine.
