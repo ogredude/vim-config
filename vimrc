@@ -30,9 +30,10 @@ Bundle 'taglist.vim'
 Bundle 'vimwiki'
 Bundle 'snipMate'
 Bundle 'rodjek/vim-puppet'
-
+Bundle 'nanotech/jellybeans.vim'
 
 " tpope
+Bundle 'tpope/vim-vividchalk'
 Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-unimpaired'
@@ -235,7 +236,6 @@ if has('gui_running')
   " for Gui versions of vim. see :help guioptions for more info
   set guifont=Monaco\ for\ Powerline
   set guioptions=aAce
-  colorscheme monokai_modified
 
   " for MacVim
   if has("macunix")
@@ -248,9 +248,9 @@ elseif version >= 700 && &term != 'cygwin'
   set t_Co=256
   if has('gui')
     let g:CSApprox_attr_map = { 'bold' : 'bold', 'italic' : '', 'sp' : '' }
-    colorscheme monokai_modified
+    colorscheme vividchalk
   else
-"    GuiColorScheme monokai_modified
+    colorscheme vividchalk
   endif
 
 endif
